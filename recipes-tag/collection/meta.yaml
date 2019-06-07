@@ -17,3 +17,5 @@ requirements:
     - pyepics >=3.3.0
     - pyolog >=4.4.0
     - pyserial
+    - pykafka
+    - confluent_kafka
