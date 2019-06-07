@@ -1,0 +1,57 @@
+{% set name = "librdkafka" %}
+{% set version = "0.11.6" %}
+{% set sha256 = "9c0afb8b53779d968225edf1e79da48a162895ad557900f75e7978f65e642032" %}
+
+package:
+  name: {{ name }}
+  version: {{ version }}
+
+source:
+  fn: {{ name }}-{{ version }}.tar.gz
+  url: https://github.com/edenhill/{{ name }}/archive/v{{ version }}.tar.gz
+  sha256: {{ sha256 }}
+
+build:
+  number: 0
+  skip: True  # [win]
+
+requirements:
+  build:
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+  host:
+    - zlib
+    - openssl
+    - libgsasl  # [not osx]
+    - lz4-c
+  run:
+    - zlib
+    - openssl
+    - libgsasl  # [not osx]
+    - lz4-c
+
+test:
+  commands:
+    - test -f ${PREFIX}/lib/librdkafka${SHLIB_EXT}  # [not win]
+    - test -f ${PREFIX}/lib/librdkafka++${SHLIB_EXT}  # [not win]
+
+    - conda inspect linkages {{ name }}  # [unix]
+    - conda inspect objects {{ name }}   # [osx]
+
+about:
+  home: https://github.com/edenhill/librdkafka
+  license: BSD 2-clause
+  license_family: BSD
+  license_file: LICENSE
+  summary: 'The Apache Kafka C/C++ client library'
+  description: |
+    librdkafka is a C library implementation of the Apache Kafka protocol,
+    containing both Producer and Consumer support. It was designed with message
+    delivery reliability and high performance in mind, current figures exceed 1
+    million msgs/second for the producer and 3 million msgs/second for the
+    consumer.
+
+extra:
+  recipe-maintainers:
+    - kwilcox
+    - stuarteberg
