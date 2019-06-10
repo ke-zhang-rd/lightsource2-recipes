@@ -1,4 +1,4 @@
-{% set year = "2018" %}
+{% set year = "2019" %}
 {% set cycle = "3" %}
 {% set version ="0" %}
 
@@ -12,3 +12,6 @@ build:
 requirements:
   run:
     - inflection
+    - toml
+    - xraydb
+    - ansiwrap
