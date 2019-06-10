@@ -13,7 +13,7 @@ requirements:
   run:
     - amostra  # [py3k]
     - attrs >=18.0
-    - bluesky >=1.6.0  # [py3k]
+    - bluesky >=1.5.3  # [py3k]
     - bluesky-browser
     - bluesky-kafka  # [py3k]
     - controls-doctor
