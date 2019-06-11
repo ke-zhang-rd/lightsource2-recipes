@@ -14,4 +14,3 @@ requirements:
     - fabio
     - py4xs
     - lmfit >=0.9.9
-    - peakutils
