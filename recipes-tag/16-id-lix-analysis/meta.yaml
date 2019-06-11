@@ -12,3 +12,6 @@ build:
 requirements:
   run:
     - fabio
+    - py4xs
+    - lmfit
+    - peakutils.
