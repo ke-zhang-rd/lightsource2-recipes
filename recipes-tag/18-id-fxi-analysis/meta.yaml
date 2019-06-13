@@ -15,3 +15,4 @@ requirements:
     - reportlab
     - tomopy
     - pystackreg
+    - scikit-learn
