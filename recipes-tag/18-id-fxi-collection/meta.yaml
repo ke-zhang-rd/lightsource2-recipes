@@ -11,4 +11,4 @@ build:
 
 requirements:
   run:
-    - 18-id-fxi-analysis >=2019C1.0
+    - 18-id-fxi-analysis >=2019C3.0
