@@ -13,3 +13,4 @@ requirements:
   run:
     - jupyterlab
     - nodejs
+    - lmfit
