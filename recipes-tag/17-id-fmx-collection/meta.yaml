@@ -12,5 +12,5 @@ build:
 requirements:
   run:
     - jupyterlab
-    - nodejs
     - lmfit
+    - nodejs
