@@ -17,7 +17,7 @@ build:
 requirements:
     build:
         - python
-        - setuptools
+        - pip
         - versioneer
 
     run:
