@@ -1,4 +1,4 @@
-{% set version = "0.0.1" %}
+{% set version = "0.1.0a1" %}
 {% set setup_py = load_setup_py_data() %}
 
 package:
@@ -18,7 +18,6 @@ requirements:
     build:
         - python
         - pip
-        - versioneer
 
     run:
         - bluesky
@@ -27,7 +26,7 @@ requirements:
         - jsonschema
         - matplotlib
         - ophyd  # for demo's example data generator -- maybe should be optional?
-        - pyqt5 >=5.8
+        - pyqt >=5.8
         - python
         - pyzmq
         - qtpy

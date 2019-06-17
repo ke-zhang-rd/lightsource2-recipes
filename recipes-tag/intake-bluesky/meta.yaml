@@ -18,16 +18,14 @@ requirements:
     build:
         - python
         - pip
-        - versioneer
 
     run:
         - dask[bag]
-        - event_model >=1.8.0
-        - msgpack
+        - event-model >=1.8.0
+        - msgpack-python
         - msgpack-numpy
         - intake !=0.5.0
         - intake-xarray
-        - msgpack
         - msgpack-numpy  # to be split into extras or a separate package
         - numpy
         - pandas
