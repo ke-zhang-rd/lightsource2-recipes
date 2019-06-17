@@ -11,7 +11,7 @@ source:
 
 build:
     number: 0
-    script: pip install -e .
+    script: "{{ PYTHON }} -m pip install . --no-deps -vv"
     skip: True  # [py2k]
 
 requirements:
